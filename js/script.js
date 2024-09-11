@@ -27,11 +27,12 @@ const newKeyFn = () => {
 document.addEventListener('keydown', e => {
     if (e.key === keys[currentKeyIndex]) {
         newKeyFn()
-
+        message.textContent = 'вгадав'
         const successNotice = success({
             text: 'success!'
         })
     } else {
+        message.textContent = 'не вгадав'
         const myError = error({
             text: 'not correct!'
         })
